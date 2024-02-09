@@ -11,10 +11,15 @@ if ($username === 'admin' && $password === 'password') {
   header("Location: $returnurl");
 
   // Display a success message
+  echo '<div class="container">';
   echo '<p>You have successfully logged in!</p>';
+  echo '<a href="https://www.google.com" target="_blank">Continue to Google</a>';
+  echo '</div>';
 } else {
   // Display an error message
+  echo '<div class="container">';
   echo '<p>Invalid username or password.</p>';
+  echo '</div>';
 }
 
 ?>
