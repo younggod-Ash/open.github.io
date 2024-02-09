@@ -1,21 +1,80 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Advanced Open Redirect Vulnerability Example with Return URL</title>
+  <title>Advanced Open Redirect Vulnerability Example with Return URL to Google.com and Rich Look and Feel</title>
+  <style>
+    /* Add some CSS styles for a richer look and feel */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2;
+    }
+
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+
+    form {
+      width: 30px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #ffff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.19);
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 10%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 10px solid #cccc;
+      border-radius: 5px;
+    }
+
+    input[type="url"] {
+      width: 10%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 10px solid #cccc;
+      border-radius: 5px;
+      background-image: url('search.svg');
+      background-repeat: no-repeat;
+      background-position: 98% 50%;
+      background-size: 10px 110px;
+    }
+
+    button {
+      width: 10%;
+      padding: 10px;
+      background-color: #42f2;
+      color: #ffff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #3333;
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome to our website!</h1>
-  <form action="login.php" method="post">
-    <label for="username">Username:</label>
-    <input type="text" name="username" id="username" required>
+  <div class="container">
+    <h1>Welcome to our website!</h1>
+    <form action="login.php" method="post">
+      <label for="username">Username:</label>
+      <input type="text" name="username" id="username" required>
 
-    <label for="password">Password:</label>
-    <input type="password" name="password" id="password" required>
+      <label for="password">Password:</label>
+      <input type="password" name="password" id="password" required>
 
-    <label for="returnurl">Return URL:</label>
-    <input type="url" name="returnurl" id="returnurl" required>
+      <label for="returnurl">Return URL:</label>
+      <input type="url" name="returnurl" id="returnurl" value="https://www.google.com" required readonly>
 
-    <button type="submit">Login</button>
-  </form>
+      <button type="submit">Login</button>
+    </form>
+  </div>
 </body>
 </html>
