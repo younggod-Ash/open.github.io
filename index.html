@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Advanced Open Redirect Vulnerability Example</title>
+  <title>Advanced Open Redirect Vulnerability Example with Return URL</title>
 </head>
 <body>
   <h1>Welcome to our website!</h1>
@@ -12,7 +12,8 @@
     <label for="password">Password:</label>
     <input type="password" name="password" id="password" required>
 
-    <input type="hidden" name="redirect_url" value="https://example.com">
+    <label for="returnurl">Return URL:</label>
+    <input type="url" name="returnurl" id="returnurl" required>
 
     <button type="submit">Login</button>
   </form>
